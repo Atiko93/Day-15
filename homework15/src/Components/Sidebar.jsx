@@ -1,19 +1,22 @@
+
 function Sidebar() {
   return (
-    <aside style={{
-      width: '220px',
-      backgroundColor: '#f4f4f4',
-      padding: '16px',
-      borderRight: '1px solid #ddd',
-      height: '100vh',
-      boxSizing: 'border-box'
-    }}>
-      <h2>Меню</h2>
-      <ul style={{ listStyle: 'none', padding: 0 }}>
-        <li> Мои уроки</li>
-        <li>Домашнее задание</li>
-        <li>Задачи</li>
-        <li>Настройки</li>
+    <aside className="
+      hidden md:block
+      w-64
+      bg-gray-100
+      p-4
+      border-r
+      border-gray-300
+      min-h-screen
+    ">
+      <h2 className="text-lg font-bold mb-4">Меню</h2>
+
+      <ul className="space-y-2">
+        <li className="hover:text-blue-600 cursor-pointer">Мои уроки</li>
+        <li className="hover:text-blue-600 cursor-pointer">Домашнее задание</li>
+        <li className="hover:text-blue-600 cursor-pointer">Задачи</li>
+        <li className="hover:text-blue-600 cursor-pointer">Настройки</li>
       </ul>
     </aside>
   );

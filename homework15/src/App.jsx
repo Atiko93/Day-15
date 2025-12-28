@@ -1,18 +1,17 @@
-import { useState } from "react";
-import "./App.css";
-import Sidebar from './components/Sidebar';
-import Header from './components/Header';
-import MainDashboard from './components/MainDashboard';
 
+import Sidebar from "./components/Sidebar";
+import Header from "./components/Header";
+import MainDashboard from "./components/MainDashboard";
 
 function App() {
   return (
-    <div style={{ display: 'flex' }}>
+    <div className="flex min-h-screen bg-gray-50">
       <Sidebar />
-      <div style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
+
+      <main className="flex-1 flex flex-col">
         <Header />
         <MainDashboard />
-      </div>
+      </main>
     </div>
   );
 }

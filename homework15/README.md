@@ -1,16 +1,73 @@
-# React + Vite
+# Демо-проект: Boards Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Учебный демо-проект для работы с массивом объектов (досок) и динамическим отображением данных в интерфейсе. Проект реализован с использованием React и Tailwind CSS.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Описание проекта
 
-## React Compiler
+Проект демонстрирует:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- хранение данных о досках в массиве объектов;
+- динамический рендеринг карточек досок;
+- компонентный подход (Header, Sidebar, MainDashboard, BoardCard);
+- адаптивный интерфейс с использованием Tailwind CSS;
+- чистую и логичную структуру проекта.
 
-## Expanding the ESLint configuration
+Каждая доска содержит следующие поля:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **id** — уникальный идентификатор;
+- **title** — название доски;
+- **description** — краткое описание;
+- **status** — статус доски (active/archived);
+- **createdAt** — дата создания.
+
+---
+
+## Стек технологий
+
+- **React** — библиотека для построения интерфейсов;
+- **Tailwind CSS** — утилитарный CSS-фреймворк;
+- **JavaScript** — для логики работы с массивами и рендеринга;
+- **Vite / Create React App** — сборка проекта.
+
+---
+
+## Структура проекта
+
+project/
+├─ src/
+│ ├─ components/
+│ │ ├─ BoardCard/BoardCard.jsx
+│ │ ├─ Header.jsx
+│ │ ├─ Sidebar.jsx
+│ │ └─ MainDashboard.jsx
+│ ├─ data/
+│ │ └─ boards.js
+│ ├─ App.jsx
+│ ├─ index.jsx
+│ └─ index.css
+├─ package.json
+└─ README.md
+
+
+
+---
+
+## Как запустить проект
+
+1. Клонировать репозиторий:
+```bash
+git clone <URL_репозитория>
+
+2. Установить зависимости:
+
+npm install
+
+3. Запустить локальный сервер разработки:
+
+npm run dev
+
+4.  Открыть проект в браузере по адресу:
+
+http://localhost:5173
